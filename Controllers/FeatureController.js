@@ -203,8 +203,8 @@ export const checkout = async (req, res) => {
           quantity: item.quantity,
         };
       }),
-      success_url: "http://localhost:5173/success",
-      cancel_url: "http://localhost:5173/",
+      success_url: "https://foodo-tastebuddy.vercel.app/success",
+      cancel_url: "https://foodo-tastebuddy.vercel.app/",
     });
 
     res.json({ url: session.url });
