@@ -16,7 +16,7 @@ app.use(cookieParser())
 dotenv.config()
 app.use(morgan('dev'))
 app.use(cors({
-    origin:["https://foodo-tastebuddy.vercel.app/"],
+    origin:["https://foodo-your-taste-buddy.vercel.app/"],
     credentials:true,
 }))
 
