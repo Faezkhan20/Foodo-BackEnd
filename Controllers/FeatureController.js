@@ -203,8 +203,8 @@ export const checkout = async (req, res) => {
           quantity: item.quantity,
         };
       }),
-      success_url: "https://foodo-tastebuddy.vercel.app/success",
-      cancel_url: "https://foodo-tastebuddy.vercel.app/",
+      success_url: "https://foodo-tastebuddy.netlify.app/success",
+      cancel_url: "https://foodo-tastebuddy.netlify.app/",
     });
 
     res.json({ url: session.url });
