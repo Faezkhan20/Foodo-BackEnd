@@ -204,7 +204,7 @@ export const checkout = async (req, res) => {
         };
       }),
       success_url: "https://foodo-tastebuddy.vercel.app/success",
-      cancel_url: "hhttps://foodo-tastebuddy.vercel.app/",
+      cancel_url: "https://foodo-tastebuddy.vercel.app/",
     });
 
     res.json({ url: session.url });
