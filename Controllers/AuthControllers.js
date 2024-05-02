@@ -74,17 +74,19 @@ export const login = async (req, res) => {
 // LOGOUT ROUTE
 export const logout = async (req, res) => {
   try {
-    res.clearCookie("token").json({ success: true, message: "Logged Out" });
+    res.clearCookie("token"); // Remove .json() here
+    res.json({ success: true, message: "Logged Out" }); // Return JSON response separately
   } catch (error) {
     return res.status(500).json({ success: false, message: error.message });
   }
 };
 
+
 // GET USER ROUTE
 export const getUser = async (req, res) => {
-  const reqId = req.id;
-
+  
   try {
+    const reqId = req.id;
     let user = await User.findById(reqId).select("-password");
 
     if (!user) {
