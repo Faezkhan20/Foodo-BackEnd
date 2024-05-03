@@ -16,7 +16,7 @@ app.use(cookieParser())
 dotenv.config()
 app.use(morgan('dev'))
 app.use(cors({
-    origin:"https://foodo-tastebuddy.netlify.app",
+    origin:"https://foodo-tastebuddy.netlify.app/",
     credentials:true,
 }))
 
