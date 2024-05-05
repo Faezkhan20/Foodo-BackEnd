@@ -15,9 +15,12 @@ app.use(express.json())
 app.use(cookieParser())
 dotenv.config()
 app.use(morgan('dev'))
-app.use(cors())
+app.use(cors({
+    origin: ["https://foodo-food-buddy.vercel.app", "https://foodo-tastebuddy-backend.onrender.com"]
+}))
 
 app.use("/api",router)
+console.log("hello")
 
 
 
