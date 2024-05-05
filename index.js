@@ -17,7 +17,7 @@ dotenv.config()
 app.use(morgan('dev'))
 app.use(cors({
     origin: ["https://foodo-food-buddy.vercel.app","http://localhost:5173"],
-    Credentials:true;
+    credentials:true
 }))
 
 app.use("/api",router)
