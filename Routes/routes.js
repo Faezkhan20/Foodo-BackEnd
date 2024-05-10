@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getUser, login, logout, resetPassword, signup, verifyOtp } from "../Controllers/AuthControllers.js";
+import { getUser, login,logout,resetPassword, signup, verifyOtp } from "../Controllers/AuthControllers.js";
 import {verifyToken} from "../Middlewears/verifyToken.js"
 import { addToCart, checkout, clearCart, decrementQuantity, getCart,incrementQuantity, removeFromCart } from "../Controllers/FeatureController.js";
 const router=Router()
@@ -12,6 +12,7 @@ router.get("/logout",logout)
 router.put("/reset-password",resetPassword);;
 router.put("/verify-otp",verifyOtp);
 router.get("/get-user",verifyToken,getUser)
+router.get("/verify-token",verifyToken)
 
 //Feature routes
 router.post("/add-to-cart/:id",addToCart);
